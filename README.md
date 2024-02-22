@@ -1,3 +1,16 @@
+# Home work 74. React Создание компонента V2
+
+Необходимо создать компонент Card.jsx который:
+
+1. Будет возвращать следующую структуру — [ссылка](https://github.com/junjun-it-courses/react-hw/blob/master/task-2.html)
+2. Компонент принимает 2 пропса title и text
+3. Необходимо принять их в компоненте и отрендерить в соответствующих местах
+4. Если какого-то пропса не хватает (не был передан в компонент), то не рендерим html код который его оборачивает
+5. Подключить компонент в App.js и отрендерить 3 раза (передавая пропсы по очереди):
+- При первом рендере передаем только title
+- При втором только text
+- При третьем оба пропса
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
