@@ -1,3 +1,13 @@
+# Home Work 72. Сгенерувати свій перший реакт-додаток
+
+Додаток повинен складатися з трьох блоків:
+
+- хедер;
+- ліва бічна навігація;
+- центральний контейнер.
+
+Контент всередині блоків довільний
+__________________________
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
