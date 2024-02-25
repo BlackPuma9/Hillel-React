@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
-
+import HelloMessage from "./components/HelloMessage";
+import List from "./components/List";
 function App() {
+    const serverdata = [
+        {id: 1, name: 'Yuli'},
+        {id: 2, name: 'Yani'}
+    ]
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <HelloMessage name='Some name' type='Some type' quantity={100}/>
+
+    <List data={serverdata}/>
     </div>
   );
 }
