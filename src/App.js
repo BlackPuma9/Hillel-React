@@ -1,6 +1,7 @@
 import './App.css';
 import HelloMessage from "./components/HelloMessage";
 import List from "./components/List";
+import ButtonCN from "./components/ButtonCN";
 function App() {
     const serverdata = [
         {id: 1, name: 'Yuli'},
@@ -11,7 +12,10 @@ function App() {
     <div className="App">
       <HelloMessage name='Some name' type='Some type' quantity={100}/>
 
-    <List data={serverdata}/>
+      <h2>Unordered List</h2>
+        <List data={serverdata}/>
+
+       <ButtonCN  label={'Bbn1'} isPressed />
     </div>
   );
 }
