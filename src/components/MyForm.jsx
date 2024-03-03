@@ -2,8 +2,8 @@ import React from "react"
 import Button from "react-bootstrap/Button"
 import Form from "react-bootstrap/Form"
 import FloatingLabel from "react-bootstrap/FloatingLabel"
-import Table from "react-bootstrap/Table"
 import classNames from "classnames"
+import List from "./List"
 
 
 class MyForm extends React.Component {
@@ -62,7 +62,7 @@ class MyForm extends React.Component {
                             this.setState({showForm: !this.state.showForm})
                         }
                     }>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Group className="mb-3" controlId="email">
                             <Form.Label>Email address</Form.Label>
                             <Form.Control
                                 type="email"
@@ -70,7 +70,7 @@ class MyForm extends React.Component {
                                 value={this.state.email}
                                 placeholder="Enter email"/>
                         </Form.Group>
-                        <Form.Group className="mb-3" controlId="formBasicPassword">
+                        <Form.Group className="mb-3" controlId="password">
                             <Form.Label>Password</Form.Label>
                             <Form.Control
                                 type="password"
@@ -79,7 +79,7 @@ class MyForm extends React.Component {
                                 placeholder="Password"/>
                         </Form.Group>
 
-                        <FloatingLabel className="mb-3" controlId="floatingTextarea2" label="Address">
+                        <FloatingLabel className="mb-3" controlId="address" label="Address">
                             <Form.Control
                                 as="textarea"
                                 onChange={this.handlerAddress}
@@ -88,7 +88,7 @@ class MyForm extends React.Component {
                             />
                         </FloatingLabel>
 
-                        <Form.Group className="mb-3" controlId="formBasicCity">
+                        <Form.Group className="mb-3" controlId="city">
                             <Form.Label>City</Form.Label>
                             <Form.Control
                                 type="text"
@@ -97,7 +97,7 @@ class MyForm extends React.Component {
                                 placeholder="City"/>
                         </Form.Group>
 
-                        <FloatingLabel className="mb-3" controlId="floatingSelect" label="Country">
+                        <FloatingLabel className="mb-3" controlId="country" label="Country">
                             <Form.Select
                                 onChange={this.handlerCountry}
                                 value={this.state.country}
@@ -110,7 +110,7 @@ class MyForm extends React.Component {
                         </FloatingLabel>
 
 
-                        <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                        <Form.Group className="mb-3" controlId="rules">
                             <Form.Check
                                 type="checkbox"
                                 onChange={this.handlerAcceptRules}
@@ -125,34 +125,22 @@ class MyForm extends React.Component {
 
                 <div className={tableClass}>
                     <Button
+                        className="mb-3 mt-3"
                         variant="primary"
                         type="submit"
                         onClick={() => this.setState({showForm: !this.state.showForm})}
                     >
                         Back
                     </Button>
-                    <Table striped bordered hover>
-                        <thead>
-                        <tr>
-                            <th>Email</th>
-                            <th>Password</th>
-                            <th>Address</th>
-                            <th>City</th>
-                            <th>Country</th>
-                            <th>AcceptRules</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>{this.state.email}</td>
-                            <td>{this.state.password}</td>
-                            <td>{this.state.address}</td>
-                            <td>{this.state.city}</td>
-                            <td>{this.state.country}</td>
-                            <td>{Boolean(this.state.acceptRules).toString()}</td>
-                        </tr>
-                        </tbody>
-                    </Table>
+                    <List
+                        className="mb-3"
+                        email={this.state.email}
+                        password={this.state.password}
+                        address={this.state.address}
+                        city={this.state.city}
+                        country={this.state.country}
+                        acceptRules={this.state.acceptRules}
+                    />
                 </div>
 
             </div>
