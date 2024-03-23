@@ -1,13 +1,20 @@
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { add, deleteAll } from "../store";
 
-export default function TodoForm({ createTask, deleteAll }) {
+export default function TodoForm() {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
+  const dispatch = useDispatch();
+
+  const deleteAllTodos = () => {
+    dispatch(deleteAll());
+  };
   const createTodo = () => {
     if (title.length !== 0 || body.length !== 0) {
-      createTask(title, body);
+      dispatch(add({ title, body, isCompleted: false }));
     } else {
       alert("Inputs can not be empty");
     }
@@ -45,7 +52,7 @@ export default function TodoForm({ createTask, deleteAll }) {
       <Button variant="outline-warning" onClick={clearInputs}>
         Clear inputs
       </Button>{" "}
-      <Button variant="outline-danger" onClick={deleteAll}>
+      <Button variant="outline-danger" onClick={deleteAllTodos}>
         Delete all
       </Button>{" "}
     </Form>

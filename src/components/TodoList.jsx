@@ -1,6 +1,6 @@
 import TodoItem from "./TodoItem";
 
-export default function TodoList({ tasks, deleteTask, updateIsCompleted }) {
+export default function TodoList({ tasks }) {
   return tasks.map((task, index) => (
     <TodoItem
       key={index}
@@ -8,8 +8,7 @@ export default function TodoList({ tasks, deleteTask, updateIsCompleted }) {
       title={task.title}
       body={task.body}
       isCompleted={task.isCompleted}
-      deleteTask={deleteTask}
-      updateIsCompleted={updateIsCompleted}
+      showButtons={true}
     />
   ));
 }
