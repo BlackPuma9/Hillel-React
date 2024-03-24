@@ -1,3 +1,22 @@
+# Home Work 89. Todo List
+
+Так как мы будем плотно работать с TodoList и у вас уже набита на нем рука, мы на нем и продолжим изучение реаккт.
+
+Ваша задача, реализовать такой-же TodoList который вы увидите по [ссылке](https://vladimirshaitan.github.io/TodoListForStudents/).
+
+Важно! Функционал должен быть идентичным тому как он работает по ссылку выше.
+
+Реализовывать на React + [react-router](https://reactrouter.com/en/main), также можете переделать некоторые элементы на react-bootstrap
+
+ДЗ должно быть выполнено с использование функциональных компонентов.
+
+Доп. задача:
+
+Каждый todoItem должен иметь возможность открываться на новой страницы под своим уникальным роутом.
+Роут: todo-items/:id
+
+_______________________
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
